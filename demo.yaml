@@ -1,0 +1,20 @@
+name: sci-e-demo
+description:
+tags:
+initialize:
+  models:
+    - name: sci-e
+      kind: plugin
+      verbose: false
+      model: SciEModel
+      path: "@grnsft/if-models"
+graph:
+  children:
+    child:
+      pipeline:
+        - sci-e
+      config:
+        sci-e:
+      inputs:
+        - location: eastus
+        - location: germanywestcentral
